@@ -33,17 +33,17 @@ class Ceasar
                 }
   
     # array for numbers -> letters
-    @@letters = [ ' ', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' ]
+    @@letters = [ 'Z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' ]
 
     # method for shifting numbers
     def shift(numbers, i)
-      @numbers = numbers
+      @numbers = numbers.split(',')
       @shifted = ""
-      @numbers.each_char do |num|
+      @numbers.each do |num|
         unless num.eql?(' ') 
-          @shifted << (num.to_i + i).to_s
+          @shifted << (num.to_i + i).to_s + ','
         else
-          @shifted << ' '
+          @shifted << ' ,'
         end
       end
       @shifted
@@ -64,20 +64,24 @@ class Ceasar
       # loop through @alpa_str
       @alpha_str.each_char do |c|
         #turn letter into number
-        @num_str << @@numbers[c].to_s
+        unless c.eql?(' ')
+          @num_str << @@numbers[c].to_s + ','
+        else
+          @num_str << ' ,'
+        end
       end
       @num_str
     end
   
   # method for numbers -> letters
     def to_letters(input_str)
-      @num_str = input_str
+      @num_str = input_str.split(',')
 
       #string of letters to return
       @alpha_str = ""
 
       # loop through num_str
-      @num_str.each_char do |c|
+      @num_str.each do |c|
         unless c.eql?(' ')
           @alpha_str << @@letters[mod_26(c.to_i)]
         else
@@ -97,12 +101,15 @@ class Ceasar
       @ciphertext = to_numbers(@ciphertext)
       
       #shift numbers n
-      #@ciphertext = shift(@ciphertext, n)
+      @ciphertext = shift(@ciphertext, n)
 
       #convert back to letters
       @ciphertext = to_letters(@ciphertext)
     end
 
   # method for decrypting letters with shif N
+    def decrypt(ciphertext, j)
+      @plaintext = encrypt(ciphertext, j*(-1))
+    end
 
 end
