@@ -1,4 +1,4 @@
-Copyright (c) 2010 LupineDev
+Copyright (c) 2010 Christopher Sass
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the

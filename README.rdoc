@@ -1,18 +1,20 @@
 = lupine_crypto
 
-Description goes here.
+Ruby implementation of some classic encryption algorithms.
 
-== Contributing to lupine_crypto
+== Current Encryption Algorithms
+
+* Ceasar Cipher (the "Hellow World" of encryption)
+
+Hopefully there will be more to come...
+
+== Gem Status
+
+Just added a gem skeleton using jeweler https://github.com/technicalpickles/jeweler but have not fully 
+integrated the old code into it so it's not quite ready for its first release
+
  
-* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
-* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
-* Fork the project
-* Start a feature/bugfix branch
-* Commit and push until you are happy with your contribution
-* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
-* Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
-
-== Copyright
+==== Copyright
 
 Copyright (c) 2010 LupineDev. See LICENSE.txt for
 further details.

@@ -1,0 +1,2 @@
+module LupineCrypto
+end
