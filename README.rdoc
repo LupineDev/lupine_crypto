@@ -16,6 +16,6 @@ integrated the old code into it so it's not quite ready for its first release
  
 ==== Copyright
 
-Copyright (c) 2010 LupineDev. See LICENSE.txt for
+Copyright (c) 2010 Christopher Sass. See LICENSE.txt for
 further details.
 
