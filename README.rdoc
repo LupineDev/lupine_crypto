@@ -4,7 +4,7 @@ Ruby implementation of some classic encryption algorithms.
 
 == Current Encryption Algorithms
 
-* Ceasar Cipher (the "Hellow World" of encryption)
+* Caesar Cipher (the "Hellow World" of encryption)
 
 Hopefully there will be more to come...
 
